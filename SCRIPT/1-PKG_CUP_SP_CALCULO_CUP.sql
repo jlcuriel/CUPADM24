@@ -199,7 +199,7 @@ AS
          LEFT JOIN formacion_inicial fi on FI.ID_FORMACION = SF.id_formacion
          LEFT JOIN competencia_basica CB on CB.ID_COMPETENCIA_BASICA = SF.ID_COMPETENCIA_BASICA
          LEFT JOIN evaluacion_desempenio ED on ED.ID_EVALUACION_DESEMPENIO = sf.ID_EVALUACION_DESEMPENIO
-         INNER JOIN evaluacion@SQLDESA EV ON EV."Id_Evaluacion" = SF.ID_ECCC AND EV."Id_Tipo_Evaluacion" IN (1,2)
+         INNER JOIN evaluacion@DB_ECCC EV ON EV."Id_Evaluacion" = SF.ID_ECCC AND EV."Id_Tipo_Evaluacion" IN (1,2)
          WHERE sf.EMISION_CUP IS NOT NULL AND sf.ESTATUS_CUP in (0,1)
          AND SF.ID_EMISION_SF IN (SELECT max(ESF.id_emision_sf) 
                               FROM emision_sf ESF
