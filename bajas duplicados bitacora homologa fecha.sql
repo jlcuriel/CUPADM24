@@ -11,4 +11,6 @@ where a.id_emision_sf in (
                                     from cupadm.emision_sf a
                                     inner join cupadm.CUP_BIT_HOMOLOGA_FECHAS b on a.id_emision_sf = b.id_emision_sf
                                     group by id_persona
-                                    having count(1) > 1)
+                                    having count(1) > 1);
+									
+commit;
