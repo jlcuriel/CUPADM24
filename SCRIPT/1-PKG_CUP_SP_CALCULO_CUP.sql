@@ -205,7 +205,6 @@ AS
                               FROM emision_sf ESF
                              WHERE ESF.id_persona = sf.id_persona
                                AND ESF.emision_cup is not null)
-         --AND PER.CUIP IN (SELECT CUIP FROM CUIP_PBA_240208)--SOLO PARA PRUEBAS
          ORDER BY sf.id_persona, sf.id_emision_sf DESC;
 
         REGCR_VERIFICA_SF CR_VERIFICA_SF%ROWTYPE;
